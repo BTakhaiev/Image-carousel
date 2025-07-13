@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 90%;
+}
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-slide {
+height: 50vh;
+width: 25vh;
+background-color: aliceblue;
+transition: transform 0.2s ease;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.8;
+}
+
+.swiper-slide-active {
+  transform: scale(1.2) !important;
+}
+
+.swiper-button-prev {
+  transition: transform 0.2s ease;
+}
+
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+
+.swiper-button-next {
+  transition: transform 0.2s ease;
+}
+
+.swiper-button-next:hover {
+  transform: scale(1.2);
+}
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
