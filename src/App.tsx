@@ -41,7 +41,7 @@ function App() {
         modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard]}
         spaceBetween={80}
         slidesPerView={3}
-        speed={150}
+        speed={350}
         navigation
         pagination={{
           dynamicBullets: true,
