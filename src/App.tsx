@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper-bundle.css';
 import './App.css'
 
+type Photo = {
+  id: number;
+  url: string;
+  title: string;
+};
+
+type ErrorType = {
+  message: string;
+};
+
 function App() {
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<ErrorType | null>(null);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/photos?_limit=10')
